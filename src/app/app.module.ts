@@ -10,6 +10,7 @@ import { IndicatorsService } from './indicators/indicators.service';
 import { PaperTradeParametersComponent } from './paper-trade/paper-trade-parameters/paper-trade-parameters.component';
 import { PaperTradeGraphDirective } from './paper-trade/paper-trade-graph/paper-trade-graph.directive';
 import { PaperTradeResultsComponent } from './paper-trade/paper-trade-results/paper-trade-results.component';
+import { MacdstrategyComponent } from './paper-trade/paper-trade-parameters/paper-trade-strategies-parameters/macdstrategy.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PaperTradeResultsComponent } from './paper-trade/paper-trade-results/pa
         AppComponent,
         PaperTradeGraphDirective,
         PaperTradeParametersComponent,
-        PaperTradeResultsComponent
+        PaperTradeResultsComponent,
+        MacdstrategyComponent
     ],
     imports: [
         BrowserModule,

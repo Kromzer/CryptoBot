@@ -1,15 +1,21 @@
-<label for="pair">Pair:</label>
-<select id="pair" [(ngModel)]="_selectedPair">
-  <option value=""></option>
-  <option *ngFor="let pair of pairs">{{pair}}</option>
-</select>
-<label for="interval">Interval:</label>
-<select id="interval" [(ngModel)]="_selectedInterval">
-  <option value=""></option>
-  <option *ngFor="let interval of intervals">{{interval}}</option>
-</select>
-<label for="strategy">Strategy:</label>
-<select id="strategy" [(ngModel)]="_selectedStrategy">
-  <option value=""></option>
-  <option *ngFor="let strategy of strategies">{{strategy}}</option>
-</select>
+<div>
+  <label for="pair">Pair:</label>
+  <select id="pair" [(ngModel)]="_selectedPair">
+    <option value=""></option>
+    <option *ngFor="let pair of pairs">{{pair}}</option>
+  </select>
+  <label for="interval">Interval:</label>
+  <select id="interval" [(ngModel)]="_selectedInterval">
+    <option value=""></option>
+    <option *ngFor="let interval of intervals">{{interval}}</option>
+  </select>
+  <label for="strategy">Strategy:</label>
+  <select id="strategy" [(ngModel)]="_selectedStrategy">
+    <option value=""></option>
+    <option *ngFor="let strategy of strategies">{{strategy}}</option>
+  </select>
+</div>
+
+<div>
+  <app-macdstrategy #macdStrategyComponent [hidden]="!(_selectedStrategy=='MACD')"></app-macdstrategy>
+</div>
