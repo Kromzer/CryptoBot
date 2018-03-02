@@ -14,6 +14,8 @@
     <option value=""></option>
     <option *ngFor="let strategy of strategies">{{strategy}}</option>
   </select>
+  <input type="checkbox" id="volumeValidation" [(ngModel)]="_volumeValidation">
+  <label for="volumeValidation">Volume validation</label>
 </div>
 
 <div>

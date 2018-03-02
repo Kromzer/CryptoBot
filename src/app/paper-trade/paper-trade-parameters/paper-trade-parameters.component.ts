@@ -20,6 +20,7 @@ export class PaperTradeParametersComponent {
     private _selectedPair: string;
     private _selectedInterval: string;
     private _selectedStrategy: string;
+    private _volumeValidation: boolean;
 
     constructor(binanceService: BinanceService) {
         this.strategies = new Array();
@@ -50,5 +51,9 @@ export class PaperTradeParametersComponent {
 
     get selectedStrategy() {
         return this._selectedStrategy;
+    }
+
+    get volumeValidation() {
+        return this._volumeValidation;
     }
 }
