@@ -11,6 +11,8 @@ import { PaperTradeParametersComponent } from './paper-trade/paper-trade-paramet
 import { PaperTradeGraphDirective } from './paper-trade/paper-trade-graph/paper-trade-graph.directive';
 import { PaperTradeResultsComponent } from './paper-trade/paper-trade-results/paper-trade-results.component';
 import { MacdstrategyComponent } from './paper-trade/paper-trade-parameters/paper-trade-strategies-parameters/macdstrategy.component';
+import { EmaStrategyComponent } from './paper-trade/paper-trade-parameters/paper-trade-strategies-parameters/ema-strategy.component';
+import { RsiStrategyComponent } from './paper-trade/paper-trade-parameters/paper-trade-strategies-parameters/rsi-strategy.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { MacdstrategyComponent } from './paper-trade/paper-trade-parameters/pape
         PaperTradeGraphDirective,
         PaperTradeParametersComponent,
         PaperTradeResultsComponent,
-        MacdstrategyComponent
+        MacdstrategyComponent,
+        EmaStrategyComponent,
+        RsiStrategyComponent
     ],
     imports: [
         BrowserModule,

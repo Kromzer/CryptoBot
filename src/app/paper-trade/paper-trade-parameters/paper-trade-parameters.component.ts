@@ -4,6 +4,8 @@ import { Strategies } from '../strategies';
 import { BinanceService } from '../../binance-api/binance.service';
 import { BinanceIntervals } from '../../binance-api/binance-intervals';
 import { MacdstrategyComponent } from './paper-trade-strategies-parameters/macdstrategy.component';
+import { EmaStrategyComponent } from './paper-trade-strategies-parameters/ema-strategy.component';
+import { RsiStrategyComponent } from './paper-trade-strategies-parameters/rsi-strategy.component';
 
 @Component({
     selector: 'app-paper-trade-parameters',
@@ -13,6 +15,10 @@ import { MacdstrategyComponent } from './paper-trade-strategies-parameters/macds
 export class PaperTradeParametersComponent {
     @ViewChild('macdStrategyComponent') macdStrategyComponent: MacdstrategyComponent;
 
+    @ViewChild('emaStrategyComponent') emaStrategyComponent: EmaStrategyComponent;
+
+    @ViewChild('rsiStrategyComponent') rsiStrategyComponent: RsiStrategyComponent;
+
     private strategies: string[];
     private pairs: string[];
     private intervals: string[];
@@ -21,6 +27,7 @@ export class PaperTradeParametersComponent {
     private _selectedInterval: string;
     private _selectedStrategy: string;
     private _volumeValidation: boolean;
+    private _volumeValidationRatio: number;
 
     constructor(binanceService: BinanceService) {
         this.strategies = new Array();
@@ -55,5 +62,9 @@ export class PaperTradeParametersComponent {
 
     get volumeValidation() {
         return this._volumeValidation;
+    }
+
+    get volumeValidationRatio() {
+        return this._volumeValidationRatio;
     }
 }

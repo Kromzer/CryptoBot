@@ -16,8 +16,14 @@
   </select>
   <input type="checkbox" id="volumeValidation" [(ngModel)]="_volumeValidation">
   <label for="volumeValidation">Volume validation</label>
+  <span [hidden]="!_volumeValidation">
+    <label for="volumeValidationRatio">Ratio:</label>
+    <input type="text" id="volumeValidationRatio" [(ngModel)]="_volumeValidationRatio" />
+  </span>
 </div>
 
 <div>
   <app-macdstrategy #macdStrategyComponent [hidden]="!(_selectedStrategy=='MACD')"></app-macdstrategy>
+  <app-ema-strategy #emaStrategyComponent [hidden]="!(_selectedStrategy=='EMA')"></app-ema-strategy>
+  <app-rsi-strategy #rsiStrategyComponent [hidden]="!(_selectedStrategy=='RSI')"></app-rsi-strategy>
 </div>

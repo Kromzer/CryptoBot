@@ -1,4 +1,5 @@
 export enum Strategies {
     MACD = "MACD",
-    EMA = "EMA"
+    EMA = "EMA",
+    RSI = "RSI"
 }
